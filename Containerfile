@@ -1,15 +1,13 @@
 FROM quay.io/fedora/fedora-bootc:41
 
-# ADD etc etc
-
-# ADD usr usr
-
-RUN dnf install -y cockpit \
+RUN dnf install -y cockpit-system \
                     cockpit-podman \ 
                     cockpit-storaged \
-                    qemu-kvm \
                     cockpit-machines \
-                    cockpit-ws \
+                    cockpit-networkmanager \
+                    cockpit-files \
+                    qemu-kvm \
+                    crun-vm \
                     git \
                     neovim \
                     tmux \
@@ -19,4 +17,3 @@ RUN dnf install -y cockpit \
 RUN systemctl enable fstrim.timer \ 
                         podman.socket \
                         podman-auto-update.timer \
-                        cockpit.socket
