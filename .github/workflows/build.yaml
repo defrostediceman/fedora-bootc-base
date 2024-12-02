@@ -1,5 +1,9 @@
 name: Build Fedora Bootc base image
 
+permissions:
+  contents: read
+  packages: write
+
 on:
   schedule:
     - cron: "0 0 * * 5"
