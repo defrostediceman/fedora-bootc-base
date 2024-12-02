@@ -1,8 +1,8 @@
 FROM quay.io/fedora/fedora-bootc:41
 
-ADD etc etc
+# ADD etc etc
 
-ADD usr usr
+# ADD usr usr
 
 RUN dnf install -y cockpit \
                     cockpit-podman \ 
@@ -12,6 +12,7 @@ RUN dnf install -y cockpit \
                     cockpit-ws \
                     git \
                     neovim \
+                    tmux \
                     bash-completion \
                     && dnf clean all
 
