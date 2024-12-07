@@ -6,6 +6,7 @@ RUN dnf install -y cockpit \
                     cockpit-machines \
                     cockpit-networkmanager \
                     cockpit-files \
+                    qeu \
                     qemu-kvm \
                     firewalld \
                     crun-vm \
